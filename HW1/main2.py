@@ -1,0 +1,26 @@
+# Получение чисел
+# a = float(input()); 
+# b = float(input()); 
+# c = float(input()); 
+
+# Тестовые данные
+a = 3;
+b = 2;
+цц = 1;
+print(f"Вы Ввели следующие числа: {a},{b},{цц} ")
+
+# Применение формулы
+f = float(a**2 + b**2);
+g = float(3*b - 4);
+h = float(4 * цц**5 / 6);
+
+res = f / g ;
+resa = res  /  h;
+
+# Вывод результатов
+print(resa);
+
+print("Целая часть " + str(res  //  h))
+print("Остаток " + str(res  %  h))
+print("res: " + str(res))
+print("h: " + str(h))
