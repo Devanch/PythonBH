@@ -16,5 +16,3 @@ res3 = concat(a,d,a,d, "gogo", "momo")
 print(res1)
 print(res2)
 print(res3)
-        # for item in args:
-        #     s += item
