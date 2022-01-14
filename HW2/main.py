@@ -73,6 +73,5 @@ print(f"2.Кол-во мужчин: {cnt_male}, Кол-во женщин {cnt_fe
 print(f"3.Совершеннолетние: {cnt_adult}");
 print(f"4.Список людей: {list_names}");
 print(f"5.Список возрастов людей: {list_age}");
-print(f"6a.Наиболее популярные имена: {sorted_x[:3]} ")
-print(f"6b.Наиболее популярные имена: {Counter([pers.get('name') for pers in persons]).most_common(3)} ")
+print(f"6.Наиболее популярные имена: {sorted_x[:3]} ")
 print(f"7.Список мужчин старше 35 имена которых начинаются с F: {list_male35}");
