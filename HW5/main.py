@@ -6,7 +6,7 @@ class Point:
     y = 0.0
 
 class Line:
-    pnt_a = Point()   #
+    pnt_a = Point()   #Получаем экземпляр класса
     pnt_b = Point()
     
     def setLine(self, x1, y1, x2, y2):  #Готовые координаты
