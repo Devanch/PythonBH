@@ -6,7 +6,7 @@ def cli():
     pass
 
 @click.command()
-@click.option('--hourss', help='--hourse')
+@click.option('--hourss', help='--hourss')
 def newyear(hourss):
     date1 = datetime.datetime(2023,1,1)
     date2 = datetime.datetime.today()
@@ -24,7 +24,3 @@ cli.add_command(newyear)
 if __name__ == '__main__':
     cli()
 
-
-    # date1 = datetime.datetime(2023,1,1)
-    # date2 = datetime.datetime.today()
-    # delta = date1 - date2 if date1 > date2 else date2 - date1
