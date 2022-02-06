@@ -1,1 +1,12 @@
-"{\"age\": 45, \"name\": \"Peter\", \"children\": [{\"age\": 3, \"name\": \"Alice\"}], \"married\": true, \"city\": null}"
+{
+    "age": 45,
+    "name": "Peter",
+    "children": [
+        {
+            "age": 3,
+            "name": "Alice"
+        }
+    ],
+    "married": true,
+    "city": null
+}
