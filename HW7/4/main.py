@@ -1,4 +1,5 @@
 # импортируем базовую модель
+from textwrap import indent
 from pydantic import BaseModel
 import json
 
@@ -40,7 +41,8 @@ pers_a_Json = pers_a.json()
 
 
 with open("main.json", "w") as json_file:
-    json.dump(pers_a_Json, json_file, indent=4)
+    b = json.loads(pers_a_Json)
+    json.dump(b, json_file, indent=4)
 
 with open("main.json", "r") as json_file:
     a = json.load(json_file)
