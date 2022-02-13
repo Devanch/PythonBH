@@ -1,3 +1,4 @@
+#Подключение модулей.
 from sqlalchemy import insert, select, or_, and_
 from sqlalchemy.engine.base import Connection
 from sqlalchemy.sql.elements import Null
@@ -23,7 +24,7 @@ def insert_many_users(values):
     with engine.connect() as conn:
         conn.execute(stmt, values)
 
-#Функция
+#Функция чтения параметров пользователей
 def select_users():
     stmt = (
         select(User)
@@ -43,7 +44,7 @@ def add_columns():
     with engine.connect() as conn:
         conn.execute(stmt)
 
-#Функция 
+#Функция обновления параметров пользователя.
 def select_null_ages_users():
     stmt = "UPDATE user_account SET age = 35 WHERE name = 'Johnny'"
     with engine.connect() as conn:
@@ -61,7 +62,7 @@ def select_three_mans():
     with engine.connect() as conn:
         return list(conn.execute(stmt))
 
-#Функция 
+#Функция удаления пользователей.
 def delete_extra_rows():
     stmt = "DELETE FROM user_account WHERE id >= 14"
     with engine.connect() as conn:
