@@ -3,22 +3,23 @@ from sqlalchemy.orm import relationship
 
 from connect_to_db import Base
 
-
-class User(Base):
+#Колонки
+class User(Base):        
     __tablename__ = 'user_account'
 
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True)  
     name = Column(String(30))
     fullname = Column(String)
     sex = Column(String(6))
     age = Column(Integer)
 
-    addresses = relationship("Address", back_populates="user")
+    addresses = relationship("Address", back_populates="user") 
 
     def __repr__(self):
        return f"User(id={self.id!r}, name={self.name!r}, fullname={self.fullname!r})"
-
-class Address(Base):
+       
+#Колонки
+class Address(Base):     
     __tablename__ = 'address'
 
     id = Column(Integer, primary_key=True)
