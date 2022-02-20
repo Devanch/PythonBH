@@ -1,3 +1,4 @@
+#Иморт библиотек
 import random
 import click
 from enum import IntEnum, unique
@@ -7,7 +8,7 @@ from enum import IntEnum, unique
 def cli():
     pass
 
-
+#Класс цветов игрушек
 @unique
 class Colors(IntEnum):
     Red = 1
@@ -17,6 +18,7 @@ class Colors(IntEnum):
     Blue = 5
     Purple = 6
 
+#Класс игрушек
 @unique
 class Toys(IntEnum):
     angel = 1
@@ -25,7 +27,7 @@ class Toys(IntEnum):
     balloon = 4
     garland = 5
 
-
+#Комманда
 @click.command()
 @click.option('--toys')
 def toys(toys):
