@@ -1,6 +1,6 @@
 import random
 import click
-from enum import IntEnum
+from enum import IntEnum, unique
 
 
 @click.group()
@@ -8,6 +8,7 @@ def cli():
     pass
 
 
+@unique
 class Colors(IntEnum):
     Red = 1
     Orange = 2
@@ -16,7 +17,7 @@ class Colors(IntEnum):
     Blue = 5
     Purple = 6
 
-
+@unique
 class Toys(IntEnum):
     angel = 1
     elk = 2
@@ -28,16 +29,15 @@ class Toys(IntEnum):
 @click.command()
 @click.option('--toys')
 def toys(toys):
-    colors = (1, 2, 3, 4, 5, 6)
-    toys = (1, 2, 3, 4, 5)
-    a = random.choice(toys)
-    b = random.choice(colors)
-    res = str("Random christmas toys - " + Colors(b).name + " " + Toys(a).name)
+    rundom_toy = random.choice(list(Toys))
+    rundom_color = random.choice(list(Colors))
+    res = str("Random christmas toys - " + Colors(rundom_color).name + " " + Toys(rundom_toy).name)
     # click.echo(Toys(a).name)
     click.echo(res)
 
 
 cli.add_command(toys)
+
 
 if __name__ == '__main__':
     cli()
